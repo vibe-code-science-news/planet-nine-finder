@@ -1,0 +1,92 @@
+Comprehensive Guide to Astronomical Data Archives and FITS Repositories
+
+1. MAST (Mikulski Archive for Space Telescopes)
+
+Description: NASA's primary archive for UV, optical, and near-IR space missions
+Key Holdings: Hubble, Kepler/K2, TESS, JWST data
+Strengths: Excellent API access, Python tools (astroquery.mast)
+Relevance: Your fits_finder.py already queries MAST, finding 496 observations
+
+2. IRSA (NASA/IPAC Infrared Science Archive)
+
+Description: Premier archive for IR data from multiple missions
+Key Holdings: WISE, Spitzer, IRAS, AKARI, Herschel, Planck
+Strengths: Rich catalog cross-matching, specialized tools for IR astronomy
+Relevance: Critical for Planet Nine searches; your code already queries IRSA catalogs
+
+3. ESA Science Data Centre
+
+Description: European Space Agency's archive
+Key Holdings: Herschel, Planck, AKARI (partnership with JAXA)
+Strengths: Unique access to European mission data
+Relevance: Contains far-IR and sub-mm data ideal for cold outer solar system objects
+
+4. HEASARC (High Energy Astrophysics Archive)
+
+Description: NASA's archive for high-energy missions
+Key Holdings: Some IR data from various missions
+Relevance: Less central but sometimes contains useful complementary data
+
+Key Infrared Telescope Missions
+1. WISE/NEOWISE (Wide-field Infrared Survey Explorer)
+
+Operational Period: 2009-2011 (WISE), 2013-present (NEOWISE)
+Wavelengths: 3.4, 4.6, 12, 22 μm (WISE); 3.4, 4.6 μm only (NEOWISE)
+Coverage: All-sky surveys, multiple epochs
+Narrative: WISE performed a complete all-sky survey in four infrared bands. After depleting its coolant, it continued as NEOWISE using only the two shortest wavelength bands. This multi-epoch coverage is valuable for detecting moving objects. Your search found 2029 WISE sources in the Planet Nine region.
+
+2. Spitzer Space Telescope
+
+Operational Period: 2003-2020
+Wavelengths: 3.6, 4.5, 5.8, 8.0 μm (IRAC), 24, 70, 160 μm (MIPS)
+Coverage: Targeted observations, some wider surveys
+Narrative: Spitzer provided exceptional sensitivity in the mid-to-far infrared. Your search found 58 Spitzer observations in the region. The MIPS instrument (especially at 70 and 160 μm) would be particularly relevant for detecting cold objects like Planet Nine.
+
+3. Herschel Space Observatory
+
+Operational Period: 2009-2013
+Wavelengths: 55-672 μm (PACS, SPIRE instruments)
+Coverage: Targeted observations, some key survey programs
+Narrative: Herschel excelled at far-infrared and sub-millimeter observations, making it perhaps the ideal observatory for detecting very cold objects (30-50K). Its wavelength coverage perfectly matches the expected thermal emission peak for Planet Nine. Your current search doesn't show Herschel data, representing a major opportunity.
+
+4. IRAS (Infrared Astronomical Satellite)
+
+Operational Period: 1983
+Wavelengths: 12, 25, 60, 100 μm
+Coverage: All-sky survey
+Narrative: Though old and low-resolution, IRAS provided the first observation of your potential Planet Nine in 1983. The pioneering all-sky infrared survey remains valuable for historical comparison.
+
+5. AKARI (ASTRO-F)
+
+Operational Period: 2006-2011
+Wavelengths: 2-180 μm (multiple instruments)
+Coverage: All-sky survey and targeted observations
+Narrative: AKARI provided your second data point in 2006, with improved resolution over IRAS. Its all-sky survey in the far-infrared is particularly valuable for cold, distant objects.
+
+6. Planck
+
+Operational Period: 2009-2013
+Wavelengths: 30-857 GHz (0.35-10 mm)
+Coverage: All-sky survey
+Narrative: While primarily designed for cosmic microwave background studies, Planck's sub-millimeter capabilities make it potentially useful for very cold objects. Your search doesn't currently include Planck data.
+
+7. JWST (James Webb Space Telescope)
+
+Operational Period: 2021-present
+Wavelengths: 0.6-28.5 μm
+Coverage: Targeted observations only
+Narrative: The newest and most sensitive infrared observatory. While its wavelength coverage doesn't extend to the far-infrared peak for Planet Nine's expected temperature, its extraordinary sensitivity could potentially detect reflected sunlight. Access is highly competitive.
+
+8. Ground-based Far-IR/Submillimeter Observatories
+
+Examples: ALMA, JCMT (SCUBA-2), APEX, CSO
+Relevance: Can provide high-resolution far-IR/submillimeter observations, though typically for targeted observations
+
+Strategic Data Mining Opportunities
+Based on your current results and the repositories available, here are the most promising data sources to expand your search:
+
+Herschel Space Observatory Archives: The wavelength range (55-672 μm) perfectly matches Planet Nine's expected thermal emission peak. The ESA Herschel Science Archive and IRSA both contain Herschel data.
+Full WISE Multi-epoch Data: Your current search found WISE sources, but extracting the multi-epoch data for motion detection would be valuable.
+Planck All-Sky Survey Data: The 857 GHz (350 μm) and 545 GHz (550 μm) channels could potentially detect a cold distant planet.
+Dark Energy Camera (DECam): As mentioned in your README, this would be a valuable addition for optical counterpart searching.
+AKARI Far-Infrared All-Sky Survey Catalog: While you have a single AKARI detection, mining the full catalog might reveal additional epochs.

@@ -1,0 +1,37 @@
+# Planet Nine Search Parameters
+
+# Path to the trajectory file
+trajectory_file: 'config/p9_trajectory.txt'
+
+# Wavelength ranges of interest (microns)
+wavelength_ranges:
+  ideal: [70, 100] # Ideal range for Planet Nine detection (far-IR peak)
+  good: [50, 200] # Good range for detection (broader far-IR)
+  acceptable: [20, 500] # Acceptable range that might show something
+
+# Search radii in degrees
+search_radii:
+  tight: 0.2 # Based on positional uncertainty calculation
+  loose: 0.5 # Expanded search for potential wider coverage
+
+# Quality criteria for classifying matches
+quality_criteria:
+  perfect_match:
+    wavelength: 'ideal' # Must be in ideal wavelength range
+    year_min: 2010 # Must be relatively recent data
+    position_match: 'exact' # Must be very close to predicted position
+  good_match:
+    wavelength: 'good' # Must be in good wavelength range
+    year_min: 2000 # Can be older data
+    position_match: 'within_tight' # Must be within tight search radius
+
+# Repository-specific settings
+repositories:
+  mast:
+    priority_instruments: ['SPITZER_SHA', 'JWST']
+    priority_wavelengths: [70, 160] # Far-IR is highest priority
+
+  irsa:
+    priority_catalogs: ['wise', 'akari', 'herschel']
+    min_wavelength: 12 # Minimum wavelength to consider (µm)
+    priority_bands: ['W4', 'W3', 'WIDE-S', 'WIDE-L'] # Prioritize these bands
